@@ -159,7 +159,7 @@ evaluation_ready_prompt:
     - "Provide clear source attribution for each piece of information"
     - "Maintain consistent response formatting for automated testing"
   
-  evaluation_format: |
+  response_format: |
     Answer: [Response containing required keywords and avoiding forbidden terms]
     
     Source Documents: [List of referenced documents with relevance explanation]
