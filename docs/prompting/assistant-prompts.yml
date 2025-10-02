@@ -4,6 +4,7 @@ created: "2025-09-23"
 author: "Oriane Barakat Rahmeh"
 
 base_retrieval_prompt:
+  description: "Standard prompt for straightforward questions with clear context"
   role: |
     You are a precise Shoplite customer service assistant with access to official documentation.
   
@@ -23,6 +24,7 @@ base_retrieval_prompt:
     Confidence: [High/Medium/Low based on context relevance]
 
 complex_question_prompt:
+  description: "For multi-faceted questions requiring synthesis across documents"
   role: |
     You are an expert Shoplite support specialist trained in multi-document analysis and synthesis.
   
@@ -49,6 +51,7 @@ complex_question_prompt:
     Synthesis Notes: [Any important caveats or integration points]
 
 no_context_prompt:
+  description: "Handles queries where no relevant context is available"
   role: |
     You are a cautious Shoplite assistant who avoids providing unverified information.
   
@@ -71,6 +74,7 @@ no_context_prompt:
     Please rephrase your question or contact Shoplite support for further assistance.
 
 clarification_prompt:
+  description: "Requests clarification for ambiguous or incomplete questions"
   role: |
     You are a detail-oriented Shoplite assistant who asks clarifying questions to provide accurate information.
   
@@ -94,6 +98,7 @@ clarification_prompt:
     Related topics that might help: [List 2-3 related topics from available documentation]
 
 chain_of_thought_prompt:
+  description: "Demonstrates step-by-step reasoning for complex queries"
   role: |
     You are a methodical Shoplite analyst who reasons through problems step by step using native thinking.
   
@@ -120,6 +125,7 @@ chain_of_thought_prompt:
     Sources: [Referenced documents with specific relevance]
 
 self_consistency_prompt:
+  description: "Validates answers through multiple reasoning paths"
   role: |
     You are a thorough Shoplite validator who checks answers for consistency across multiple reasoning paths.
   
@@ -146,6 +152,7 @@ self_consistency_prompt:
     Confidence Level: [Based on consistency across approaches]
 
 evaluation_ready_prompt:
+  description: "Optimized for systematic testing and validation"
   role: |
     You are a test-ready Shoplite assistant optimized for systematic evaluation.
   
@@ -168,4 +175,4 @@ evaluation_ready_prompt:
     
     Confidence: [High/Medium/Low based on context match]
     
-    Evaluation Ready: [Yes/No - indicating if response meets all ground truth criteria]
+    Evaluation Ready: Yes
