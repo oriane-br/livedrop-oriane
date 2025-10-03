@@ -190,7 +190,7 @@ class ShopLiteChatClient:
                 print(f"❌ Unexpected error: {e}")
 
 def main():
-    DEFAULT_URL = "https://matilda-nonallelic-malaysia.ngrok-free.dev/"
+    DEFAULT_URL = "https://matilda-nonallelic-malaysia.ngrok-free.dev"
     
     # Get URL from command line or use default
     if len(sys.argv) > 1:
