@@ -1,0 +1,178 @@
+[
+  {
+    "id": "PROD-001",
+    "title": "Wireless Bluetooth Headphones Pro",
+    "price": 85.00,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop",
+    "tags": ["electronics", "audio", "wireless", "premium"],
+    "stockQty": 45
+  },
+  {
+    "id": "PROD-002",
+    "title": "Smartphone X Pro 256GB",
+    "price": 899.00,
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300&h=300&fit=crop",
+    "tags": ["electronics", "mobile", "premium", "new"],
+    "stockQty": 28
+  },
+  {
+    "id": "PROD-003",
+    "title": "Gaming Laptop RTX 4070",
+    "price": 1450.40,
+    "image": "https://images.unsplash.com/photo-1587202372775-98927cf57c5a?w=300&h=300&fit=crop",
+    "tags": ["electronics", "computers", "gaming", "high-performance"],
+    "stockQty": 15
+  },
+  {
+    "id": "PROD-004",
+    "title": "Smart Watch Series 5",
+    "price": 169.99,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300&fit=crop",
+    "tags": ["electronics", "wearables", "fitness", "smart"],
+    "stockQty": 60
+  },
+  {
+    "id": "PROD-005",
+    "title": "Noise Cancelling Earbuds",
+    "price": 75.99,
+    "image": "https://images.unsplash.com/photo-1572569511254-d8f42fe181f9?w=300&h=300&fit=crop",
+    "tags": ["electronics", "audio", "wireless", "portable"],
+    "stockQty": 75
+  },
+  {
+    "id": "PROD-006",
+    "title": "4K Ultra HD Smart TV 55\"",
+    "price": 499.99,
+    "image": "https://images.unsplash.com/photo-1560169897-fc0cdbdfa4d5?w=300&h=300&fit=crop",
+    "tags": ["electronics", "home entertainment", "4k", "smart"],
+    "stockQty": 22
+  },
+  {
+    "id": "PROD-011",
+    "title": "Smart Home Speaker System",
+    "price": 175.99,
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b6a8?w=300&h=300&fit=crop",
+    "tags": ["electronics", "smart home", "audio", "voice assistant"],
+    "stockQty": 40
+  },
+  {
+    "id": "PROD-014",
+    "title": "Robot Vacuum Cleaner",
+    "price": 295.99,
+    "image": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=300&h=300&fit=crop",
+    "tags": ["electronics", "home goods", "cleaning", "smart"],
+    "stockQty": 33
+  },
+  {
+    "id": "PROD-017",
+    "title": "Wireless Gaming Mouse",
+    "price": 45.99,
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=300&h=300&fit=crop",
+    "tags": ["electronics", "gaming", "computers", "accessories"],
+    "stockQty": 55
+  },
+  {
+    "id": "PROD-018",
+    "title": "Portable Power Bank 20000mAh",
+    "price": 34.50,
+    "image": "https://images.unsplash.com/photo-1609592076395-6c6d2355c42a?w=300&h=300&fit=crop",
+    "tags": ["electronics", "mobile", "accessories", "portable"],
+    "stockQty": 80
+  },
+  {
+    "id": "PROD-007",
+    "title": "Designer Summer Dress",
+    "price": 55.00,
+    "image": "https://images.unsplash.com/photo-1520975931228-5b6a5be2d57c?w=300&h=300&fit=crop",
+    "tags": ["fashion", "women", "summer", "designer"],
+    "stockQty": 35
+  },
+  {
+    "id": "PROD-008",
+    "title": "Men's Casual Sneakers",
+    "price": 69.00,
+    "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=300&fit=crop",
+    "tags": ["fashion", "men", "footwear", "casual"],
+    "stockQty": 50
+  },
+  {
+    "id": "PROD-009",
+    "title": "Premium Leather Jacket",
+    "price": 199.00,
+    "image": "https://images.unsplash.com/photo-1551028715-6f4d4a4d4c4a?w=300&h=300&fit=crop",
+    "tags": ["fashion", "men", "outerwear", "premium"],
+    "stockQty": 18
+  },
+  {
+    "id": "PROD-010",
+    "title": "Women's Handbag Collection",
+    "price": 60.00,
+    "image": "https://images.unsplash.com/photo-1584917865447-5d6f6b6b8f8c?w=300&h=300&fit=crop",
+    "tags": ["fashion", "women", "accessories", "luxury"],
+    "stockQty": 30
+  },
+  {
+    "id": "PROD-016",
+    "title": "Luxury Watch Gold Edition",
+    "price": 1299.00,
+    "image": "https://images.unsplash.com/photo-1600962815726-457c7f92b1a4?w=300&h=300&fit=crop",
+    "tags": ["luxury", "fashion", "accessories", "premium"],
+    "stockQty": 8
+  },
+  {
+    "id": "PROD-012",
+    "title": "Coffee Maker Pro",
+    "price": 149.00,
+    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=300&h=300&fit=crop",
+    "tags": ["home goods", "kitchen", "appliances", "premium"],
+    "stockQty": 25
+  },
+  {
+    "id": "PROD-013",
+    "title": "Memory Foam Mattress Queen",
+    "price": 499.00,
+    "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=300&h=300&fit=crop",
+    "tags": ["home goods", "bedroom", "premium", "comfort"],
+    "stockQty": 12
+  },
+  {
+    "id": "PROD-015",
+    "title": "Yoga Mat Premium",
+    "price": 40.00,
+    "image": "https://images.unsplash.com/photo-1544367567-964f4f4a5c8a?w=300&h=300&fit=crop",
+    "tags": ["sports", "fitness", "home goods", "wellness"],
+    "stockQty": 65
+  },
+  {
+    "id": "PROD-019",
+    "title": "Desk Lamp with Wireless Charging",
+    "price": 45.00,
+    "image": "https://images.unsplash.com/photo-1606813908537-7bdb72a3a01e?w=300&h=300&fit=crop",
+    "tags": ["home goods", "electronics", "office", "smart"],
+    "stockQty": 42
+  },
+  {
+    "id": "PROD-020",
+    "title": "Air Purifier with HEPA Filter",
+    "price": 155.00,
+    "image": "https://images.unsplash.com/photo-1620912189861-1e5076a02c84?w=300&h=300&fit=crop",
+    "tags": ["home goods", "electronics", "health", "premium"],
+    "stockQty": 27
+  },
+  {
+    "id": "PROD-021",
+    "title": "Blender Pro 1000W",
+    "price": 79.00,
+    "image": "https://images.unsplash.com/photo-1585366119957-e94926a1e3b1?w=300&h=300&fit=crop",
+    "tags": ["home goods", "kitchen", "appliances"],
+    "stockQty": 38
+  },
+  {
+    "id": "PROD-022",
+    "title": "Waterproof Bluetooth Speaker",
+    "price": 89.00,
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=300&h=300&fit=crop",
+    "tags": ["electronics", "audio", "outdoor", "portable"],
+    "stockQty": 47
+  }
+]

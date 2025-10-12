@@ -1,0 +1,123 @@
+[
+    {
+      "qid": "Q01",
+      "category": "Seller Accounts",
+      "question": "How do I create a seller account on Shoplite?",
+      "answer": "To create a seller account, visit the Shoplite seller registration page, provide business information including tax identification number and registration documents, and complete the verification process which takes 2-3 business days."
+    },
+    {
+      "qid": "Q02",
+      "category": "Returns",
+      "question": "What is Shoplite's standard return window?",
+      "answer": "Shoplite offers a 30-day return window for most items starting from the delivery date. Items must be in original condition with all tags and packaging intact."
+    },
+    {
+      "qid": "Q03",
+      "category": "Payments",
+      "question": "What payment methods does Shoplite accept?",
+      "answer": "Shoplite accepts major credit cards (Visa, MasterCard, American Express), PayPal, Apple Pay, Google Pay, and Shoplite Wallet credits. Regional payment methods include bank transfers and installment plans."
+    },
+    {
+      "qid": "Q04",
+      "category": "Delivery",
+      "question": "How long does standard delivery take?",
+      "answer": "Standard delivery typically takes 3-7 business days. Express delivery options are available for 1-2 business days, and same-day delivery is offered in eligible metropolitan areas."
+    },
+    {
+      "qid": "Q05",
+      "category": "Mobile App",
+      "question": "What are the mobile app's exclusive features?",
+      "answer": "The Shoplite mobile app offers push notifications, barcode scanning, augmented reality product previews, early access to sales, location-based deals, and simplified reordering."
+    },
+    {
+      "qid": "Q06",
+      "category": "Commissions",
+      "question": "What is the commission rate for electronics?",
+      "answer": "Electronics category has an 8% commission rate. Fashion is 12%, Home Goods 10%, and Luxury Items 15%. Professional and Enterprise tier sellers receive 1-2% commission reductions."
+    },
+    {
+      "qid": "Q07",
+      "category": "Returns",
+      "question": "How do I initiate a return?",
+      "answer": "To initiate a return, go to your order history page, select the items for return, specify the reason, and request return authorization. Approved returns generate prepaid shipping labels."
+    },
+    {
+      "qid": "Q08",
+      "category": "Loyalty",
+      "question": "What are the loyalty program tiers?",
+      "answer": "The Shoplite Rewards program has Silver (0-999 points), Gold (1,000-4,999 points), and Platinum (5,000+ points) tiers. Each tier offers increasing benefits including earning multipliers and exclusive services."
+    },
+    {
+      "qid": "Q09",
+      "category": "Returns & Tracking",
+      "question": "What are the return policies and how do I track my order status?",
+      "answer": "Shoplite offers a 30-day return window requiring items in original condition. Returns need authorization through order history. For tracking, you receive email confirmation with tracking numbers available within 24 hours of shipment, accessible through the order tracking system with real-time updates."
+    },
+    {
+      "qid": "Q10",
+      "category": "Seller & Commissions",
+      "question": "How do seller accounts work and what are the commission rates?",
+      "answer": "Seller accounts require business verification taking 2-3 days. Commission rates vary by category: Electronics 8%, Fashion 12%, Home Goods 10%, Luxury Items 15%. Professional and Enterprise tiers receive 1-2% commission reductions based on sales volume."
+    },
+    {
+      "qid": "Q11",
+      "category": "Payments & Security",
+      "question": "What payment methods are available and what security measures protect them?",
+      "answer": "Shoplite accepts credit cards, PayPal, digital wallets, and Shoplite Wallet. Security includes PCI DSS compliance, tokenization, TLS 1.3 encryption, and fraud detection systems. Data encryption protects both in transit and at rest."
+    },
+    {
+      "qid": "Q12",
+      "category": "Inventory & Quality",
+      "question": "How does inventory management work for sellers and what are the quality standards?",
+      "answer": "Sellers use real-time inventory tracking with low stock alerts and multi-location management. Quality standards require 95% fulfillment rate, under 2% cancellation rate, and accurate product listings. Automated and manual audits enforce these standards."
+    },
+    {
+      "qid": "Q13",
+      "category": "Mobile & Loyalty",
+      "question": "What are the mobile app features and how do they integrate with the loyalty program?",
+      "answer": "The mobile app offers barcode scanning, AR previews, push notifications, and location-based deals. It integrates with the loyalty program for point tracking, tier status, and mobile-exclusive redemption opportunities across Silver, Gold, and Platinum tiers."
+    },
+    {
+      "qid": "Q14",
+      "category": "Promotions & Checkout",
+      "question": "How do promotional codes work with the shopping cart and checkout process?",
+      "answer": "Promotional codes can be applied during checkout for discounts, free shipping, or bundle deals. The cart shows real-time savings calculations. Stacking rules typically allow one code per order, automatically applying the best available discount during the three-step checkout process."
+    },
+    {
+      "qid": "Q15",
+      "category": "Support",
+      "question": "What customer support options are available and how do they handle different issue types?",
+      "answer": "Support is available 24/7 via live chat, email, and phone. Critical issues like payment failures get immediate attention, while standard inquiries have 4-hour response targets. Return-related issues are handled through dedicated channels with specific authorization procedures."
+    },
+    {
+      "qid": "Q16",
+      "category": "International Shipping",
+      "question": "How does shipping work internationally and what are the costs involved?",
+      "answer": "International shipping takes 7-14 days including customs processing. Costs are calculated based on package dimensions, weight, and destination. Real-time rates show during checkout, and tracking provides end-to-end visibility with customs documentation assistance."
+    },
+    {
+      "qid": "Q17",
+      "category": "API & Security",
+      "question": "What are the API capabilities for developers and how do they handle security?",
+      "answer": "The RESTful API provides product, order, and customer data access with OAuth 2.0 authentication. Rate limits start at 1,000 requests/hour. Security includes TLS encryption, tokenization, and regular security audits with comprehensive documentation and sandbox testing."
+    },
+    {
+      "qid": "Q18",
+      "category": "Reviews & Moderation",
+      "question": "How do product reviews work and what are the moderation guidelines?",
+      "answer": "The 1-5 star rating system requires purchase verification. Reviews must be authentic with image/video support. Moderation prohibits hate speech, personal information, and promotional content. Community voting surfaces helpful reviews while maintaining marketplace integrity."
+    },
+    {
+      "qid": "Q19",
+      "category": "Seller Performance",
+      "question": "What are the seller performance requirements and how do they affect commission rates?",
+      "answer": "Sellers must maintain 95% fulfillment rate, under 2% cancellation rate, and 4.0+ customer rating. Performance affects seller tier status, which determines commission reductions (1-2% for Professional/Enterprise tiers) and marketplace visibility."
+    },
+    {
+      "qid": "Q20",
+      "category": "Loyalty & Promotions",
+      "question": "How do the loyalty program and promotional systems work together?",
+      "answer": "Loyalty members earn points (1 per dollar spent) redeemable for discount codes. Tier status provides exclusive promotional access and bonus earning opportunities. The systems integrate to offer personalized promotions based on member activity and preferences."
+    }
+  ]
+  
