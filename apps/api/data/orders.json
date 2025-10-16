@@ -1,0 +1,119 @@
+[
+    {
+      "customerEmail": "demo@example.com",
+      "items": [
+        { "productName": "Wireless Bluetooth Headphones Pro", "quantity": 1 },
+        { "productName": "Stainless Steel Water Bottle", "quantity": 2 }
+      ],
+      "status": "DELIVERED"
+    },
+    {
+      "customerEmail": "demo@example.com",
+      "items": [
+        { "productName": "Yoga Mat Premium", "quantity": 1 },
+        { "productName": "Classic Cotton T-Shirt Pack", "quantity": 1 }
+      ],
+      "status": "SHIPPED"
+    },
+    {
+      "customerEmail": "demo@example.com",
+      "items": [
+        { "productName": "Smart Fitness Tracker Watch", "quantity": 1 },
+        { "productName": "Resistance Band Set", "quantity": 1 }
+      ],
+      "status": "PROCESSING"
+    },
+    {
+      "customerEmail": "sarah.fakhry@email.com",
+      "items": [
+        { "productName": "Designer Running Shoes", "quantity": 1 },
+        { "productName": "Premium Laptop Backpack", "quantity": 1 }
+      ],
+      "status": "DELIVERED"
+    },
+    {
+      "customerEmail": "michael.azar@email.com",
+      "items": [
+        { "productName": "4K Ultra HD Smart TV 55-inch", "quantity": 1 }
+      ],
+      "status": "SHIPPED"
+    },
+    {
+      "customerEmail": "emily.hanna@email.com",
+      "items": [
+        { "productName": "Ceramic Coffee Mug Set", "quantity": 1 },
+        { "productName": "Organic Cotton Bed Sheets", "quantity": 1 }
+      ],
+      "status": "PENDING"
+    },
+    {
+      "customerEmail": "robert.maalouf@email.com",
+      "items": [
+        { "productName": "Wireless Gaming Mouse", "quantity": 1 },
+        { "productName": "Tablet 10-inch Android", "quantity": 1 }
+      ],
+      "status": "SHIPPED"
+    },
+    {
+      "customerEmail": "jennifer.rahme@email.com",
+      "items": [
+        { "productName": "Designer Sunglasses", "quantity": 1 },
+        { "productName": "Leather Wallet with RFID", "quantity": 1 }
+      ],
+      "status": "DELIVERED"
+    },
+    {
+      "customerEmail": "david.lteif@email.com",
+      "items": [
+        { "productName": "Adjustable Dumbbell Set", "quantity": 1 }
+      ],
+      "status": "PROCESSING"
+    },
+    {
+      "customerEmail": "amanda.khoury@email.com",
+      "items": [
+        { "productName": "Aromatherapy Diffuser", "quantity": 1 },
+        { "productName": "Memory Foam Bath Mat", "quantity": 1 }
+      ],
+      "status": "PENDING"
+    },
+    {
+      "customerEmail": "james.rahme@email.com",
+      "items": [
+        { "productName": "Camping Tent 4-Person", "quantity": 1 },
+        { "productName": "Hiking Backpack 35L", "quantity": 1 }
+      ],
+      "status": "SHIPPED"
+    },
+    {
+      "customerEmail": "elsa.tawk@email.com",
+      "items": [
+        { "productName": "The Great Gatsby Hardcover", "quantity": 1 },
+        { "productName": "Cookbook: Healthy Recipes", "quantity": 1 }
+      ],
+      "status": "PROCESSING"
+    },
+    {
+      "customerEmail": "christopher.dahdah@email.com",
+      "items": [
+        { "productName": "Digital Camera 24MP", "quantity": 1 }
+      ],
+      "status": "SHIPPED"
+    },
+    {
+      "customerEmail": "tonia.rahme@email.com",
+      "items": [
+        { "productName": "Stainless Steel Cookware Set", "quantity": 1 }
+      ],
+      "status": "PROCESSING"
+    },
+    {
+      "customerEmail": "sarah.fakhry@email.com",
+      "items": [
+        { "productName": "Bluetooth Portable Speaker", "quantity": 1 },
+        { "productName": "Basketball Official Size", "quantity": 1 }
+      ],
+      "status": "PENDING"
+    }
+  ]
+

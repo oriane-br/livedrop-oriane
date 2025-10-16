@@ -1,0 +1,272 @@
+[
+    {
+      "name": "Wireless Bluetooth Headphones Pro",
+      "description": "High-quality wireless headphones with noise cancellation and 30-hour battery life. Perfect for music lovers and frequent travelers.",
+      "price": 129.99,
+      "category": "electronics",
+      "tags": ["audio", "wireless", "noise-canceling"],
+      "imageUrl": "https://via.placeholder.com/400?text=Wireless+Headphones",
+      "stock": 45
+    },
+    {
+      "name": "Smart Fitness Tracker Watch",
+      "description": "Advanced fitness tracker with heart rate monitoring, GPS, and sleep tracking. Water-resistant and compatible with iOS and Android.",
+      "price": 89.99,
+      "category": "electronics",
+      "tags": ["fitness", "smartwatch", "health"],
+      "imageUrl": "https://via.placeholder.com/400?text=Fitness+Tracker",
+      "stock": 78
+    },
+    {
+      "name": "4K Ultra HD Smart TV 55-inch",
+      "description": "Crystal-clear 4K television with smart features and voice control. Includes streaming apps and multiple HDMI ports.",
+      "price": 499.99,
+      "category": "electronics",
+      "tags": ["television", "smart-tv", "entertainment"],
+      "imageUrl": "https://via.placeholder.com/400?text=Smart+TV",
+      "stock": 12
+    },
+    {
+      "name": "Wireless Smartphone Charging Pad",
+      "description": "Fast wireless charging pad compatible with all Qi-enabled devices. Sleek design with LED charging indicator.",
+      "price": 24.99,
+      "category": "electronics",
+      "tags": ["charging", "wireless", "accessories"],
+      "imageUrl": "https://via.placeholder.com/400?text=Charging+Pad",
+      "stock": 92
+    },
+    {
+      "name": "Premium Laptop Backpack",
+      "description": "Durable waterproof backpack with laptop compartment and multiple organizational pockets. Perfect for students and professionals.",
+      "price": 49.99,
+      "category": "fashion",
+      "tags": ["bag", "travel", "professional"],
+      "imageUrl": "https://via.placeholder.com/400?text=Laptop+Backpack",
+      "stock": 65
+    },
+    {
+      "name": "Classic Cotton T-Shirt Pack",
+      "description": "Soft breathable cotton t-shirts in assorted colors. Perfect for everyday wear and casual occasions.",
+      "price": 19.99,
+      "category": "fashion",
+      "tags": ["clothing", "casual", "basic"],
+      "imageUrl": "https://via.placeholder.com/400?text=Cotton+T-Shirt",
+      "stock": 120
+    },
+    {
+      "name": "Designer Running Shoes",
+      "description": "Lightweight running shoes with advanced cushioning and breathable mesh. Ideal for athletes and daily exercisers.",
+      "price": 79.99,
+      "category": "fashion",
+      "tags": ["footwear", "sports", "running"],
+      "imageUrl": "https://via.placeholder.com/400?text=Running+Shoes",
+      "stock": 34
+    },
+    {
+      "name": "Stainless Steel Water Bottle",
+      "description": "Insulated stainless steel bottle that keeps drinks hot or cold for hours. Eco-friendly and BPA-free.",
+      "price": 29.99,
+      "category": "home-goods",
+      "tags": ["kitchen", "eco-friendly", "hydration"],
+      "imageUrl": "https://via.placeholder.com/400?text=Water+Bottle",
+      "stock": 88
+    },
+    {
+      "name": "Ceramic Coffee Mug Set",
+      "description": "Beautiful set of 4 ceramic mugs with comfortable handles. Microwave and dishwasher safe.",
+      "price": 22.99,
+      "category": "home-goods",
+      "tags": ["kitchen", "drinkware", "set"],
+      "imageUrl": "https://via.placeholder.com/400?text=Coffee+Mugs",
+      "stock": 56
+    },
+    {
+      "name": "Memory Foam Bath Mat",
+      "description": "Super absorbent memory foam bath mat that provides comfort and safety. Machine washable and quick-drying.",
+      "price": 34.99,
+      "category": "home-goods",
+      "tags": ["bathroom", "comfort", "safety"],
+      "imageUrl": "https://via.placeholder.com/400?text=Bath+Mat",
+      "stock": 42
+    },
+    {
+      "name": "Yoga Mat Premium",
+      "description": "Non-slip yoga mat with excellent cushioning and alignment markers. Perfect for yoga and exercise routines.",
+      "price": 39.99,
+      "category": "sports",
+      "tags": ["fitness", "yoga", "exercise"],
+      "imageUrl": "https://via.placeholder.com/400?text=Yoga+Mat",
+      "stock": 73
+    },
+    {
+      "name": "Adjustable Dumbbell Set",
+      "description": "Space-saving adjustable dumbbells with quick-change weight system. Ideal for home workouts.",
+      "price": 149.99,
+      "category": "sports",
+      "tags": ["fitness", "weights", "home-gym"],
+      "imageUrl": "https://via.placeholder.com/400?text=Dumbbell+Set",
+      "stock": 25
+    },
+    {
+      "name": "Camping Tent 4-Person",
+      "description": "Weather-resistant camping tent with easy setup design. Spacious interior with multiple windows.",
+      "price": 129.99,
+      "category": "sports",
+      "tags": ["outdoor", "camping", "adventure"],
+      "imageUrl": "https://via.placeholder.com/400?text=Camping+Tent",
+      "stock": 18
+    },
+    {
+      "name": "The Great Gatsby Hardcover",
+      "description": "Classic American novel by F. Scott Fitzgerald in beautiful hardcover edition. Perfect for collectors.",
+      "price": 14.99,
+      "category": "books",
+      "tags": ["fiction", "classic", "literature"],
+      "imageUrl": "https://via.placeholder.com/400?text=Great+Gatsby",
+      "stock": 95
+    },
+    {
+      "name": "Python Programming Guide",
+      "description": "Comprehensive guide to Python programming for beginners and intermediate developers. Includes practical examples.",
+      "price": 29.99,
+      "category": "books",
+      "tags": ["programming", "education", "technology"],
+      "imageUrl": "https://via.placeholder.com/400?text=Python+Guide",
+      "stock": 60
+    },
+    {
+      "name": "Digital Camera 24MP",
+      "description": "Advanced digital camera with 24 megapixels and 4K video recording. Perfect for photography enthusiasts.",
+      "price": 349.99,
+      "category": "electronics",
+      "tags": ["photography", "camera", "4k"],
+      "imageUrl": "https://via.placeholder.com/400?text=Digital+Camera",
+      "stock": 8
+    },
+    {
+      "name": "Wireless Gaming Mouse",
+      "description": "High-precision gaming mouse with customizable RGB lighting and ergonomic design. Long battery life.",
+      "price": 59.99,
+      "category": "electronics",
+      "tags": ["gaming", "computer", "accessories"],
+      "imageUrl": "https://via.placeholder.com/400?text=Gaming+Mouse",
+      "stock": 52
+    },
+    {
+      "name": "Organic Cotton Bed Sheets",
+      "description": "Soft organic cotton bed sheets in various sizes and colors. Hypoallergenic and breathable.",
+      "price": 45.99,
+      "category": "home-goods",
+      "tags": ["bedding", "organic", "comfort"],
+      "imageUrl": "https://via.placeholder.com/400?text=Bed+Sheets",
+      "stock": 67
+    },
+    {
+      "name": "Stainless Steel Cookware Set",
+      "description": "Complete 10-piece cookware set with even heat distribution. Oven safe and dishwasher friendly.",
+      "price": 199.99,
+      "category": "home-goods",
+      "tags": ["kitchen", "cooking", "set"],
+      "imageUrl": "https://via.placeholder.com/400?text=Cookware+Set",
+      "stock": 30
+    },
+    {
+      "name": "Basketball Official Size",
+      "description": "Official size basketball with durable construction and excellent grip. Ideal for indoor and outdoor play.",
+      "price": 29.99,
+      "category": "sports",
+      "tags": ["basketball", "sports", "outdoor"],
+      "imageUrl": "https://via.placeholder.com/400?text=Basketball",
+      "stock": 84
+    },
+    {
+      "name": "Hiking Backpack 35L",
+      "description": "Spacious hiking backpack with multiple compartments and hydration system. Comfortable for long hikes.",
+      "price": 79.99,
+      "category": "sports",
+      "tags": ["hiking", "outdoor", "travel"],
+      "imageUrl": "https://via.placeholder.com/400?text=Hiking+Backpack",
+      "stock": 41
+    },
+    {
+      "name": "Cookbook: Healthy Recipes",
+      "description": "Collection of 100 healthy and delicious recipes with nutritional information. Beautiful photography.",
+      "price": 24.99,
+      "category": "books",
+      "tags": ["cooking", "health", "recipes"],
+      "imageUrl": "https://via.placeholder.com/400?text=Cookbook",
+      "stock": 78
+    },
+    {
+      "name": "Tablet 10-inch Android",
+      "description": "Versatile Android tablet with high-resolution display and long battery life. Perfect for work and entertainment.",
+      "price": 199.99,
+      "category": "electronics",
+      "tags": ["tablet", "android", "portable"],
+      "imageUrl": "https://via.placeholder.com/400?text=Android+Tablet",
+      "stock": 15
+    },
+    {
+      "name": "Bluetooth Portable Speaker",
+      "description": "Compact Bluetooth speaker with impressive sound quality and waterproof design. Perfect for outdoor use.",
+      "price": 49.99,
+      "category": "electronics",
+      "tags": ["audio", "portable", "bluetooth"],
+      "imageUrl": "https://via.placeholder.com/400?text=Portable+Speaker",
+      "stock": 63
+    },
+    {
+      "name": "Designer Sunglasses",
+      "description": "Stylish sunglasses with UV protection and polarized lenses. Available in multiple frame colors.",
+      "price": 89.99,
+      "category": "fashion",
+      "tags": ["accessories", "eyewear", "sun-protection"],
+      "imageUrl": "https://via.placeholder.com/400?text=Sunglasses",
+      "stock": 29
+    },
+    {
+      "name": "Leather Wallet with RFID",
+      "description": "Genuine leather wallet with RFID blocking technology. Multiple card slots and bill compartment.",
+      "price": 34.99,
+      "category": "fashion",
+      "tags": ["accessories", "leather", "security"],
+      "imageUrl": "https://via.placeholder.com/400?text=Leather+Wallet",
+      "stock": 71
+    },
+    {
+      "name": "Aromatherapy Diffuser",
+      "description": "Ultrasonic essential oil diffuser with color-changing LED lights. Creates relaxing atmosphere.",
+      "price": 32.99,
+      "category": "home-goods",
+      "tags": ["wellness", "aromatherapy", "relaxation"],
+      "imageUrl": "https://via.placeholder.com/400?text=Diffuser",
+      "stock": 55
+    },
+    {
+      "name": "Resistance Band Set",
+      "description": "Set of 5 resistance bands with different tension levels. Includes carrying bag and exercise guide.",
+      "price": 19.99,
+      "category": "sports",
+      "tags": ["fitness", "exercise", "portable"],
+      "imageUrl": "https://via.placeholder.com/400?text=Resistance+Bands",
+      "stock": 90
+    },
+    {
+      "name": "Mystery Novel Bestseller",
+      "description": "Gripping mystery novel by acclaimed author. Twists and turns that keep readers engaged.",
+      "price": 12.99,
+      "category": "books",
+      "tags": ["fiction", "mystery", "bestseller"],
+      "imageUrl": "https://via.placeholder.com/400?text=Mystery+Novel",
+      "stock": 82
+    },
+    {
+      "name": "Children's Picture Book",
+      "description": "Colorful picture book with engaging story and beautiful illustrations. Perfect for young readers.",
+      "price": 8.99,
+      "category": "books",
+      "tags": ["children", "picture-book", "education"],
+      "imageUrl": "https://via.placeholder.com/400?text=Picture+Book",
+      "stock": 105
+    }
+  ]

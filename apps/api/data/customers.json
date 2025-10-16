@@ -1,0 +1,134 @@
+[
+    {
+      "name": "Demo User",
+      "email": "demo@example.com",
+      "phone": "+96171234567",
+      "address": {
+        "street": "123 Main Street",
+        "city": "keserwan",
+        "country": "lebanon",
+        "zipCode": "00000"
+      }
+    },
+    {
+      "name": "Sarah Fakhry",
+      "email": "sarah.fakhry@email.com",
+      "phone": "+96170123456",
+      "address": {
+        "street": "456  Main street",
+        "city": "keserwan",
+        "country": "lebanon",
+        "zipCode": "12345"
+      }
+    },
+    {
+      "name": "Michael Azar",
+      "email": "michael.azar@email.com",
+      "phone": "+96170345678",
+      "address": {
+        "street": "789 Main Road",
+        "city": "chouf",
+        "country": "lebanon",
+        "zipCode": "34567"
+      }
+    },
+    {
+      "name": "Emily Hanna",
+      "email": "emily.hanna@email.com",
+      "phone": "+96170456789",
+      "address": {
+        "street": "321  Red Zone",
+        "city": "beirut",
+        "country": "lebanon",
+        "zipCode": "45678"
+      }
+    },
+    {
+      "name": "Robert Maalouf",
+      "email": "robert.maalouf@email.com",
+      "phone": "+96170556789",
+      "address": {
+        "street": "654 Lane",
+        "city": "adonis",
+        "country": "lebanon",
+        "zipCode": "56789"
+      }
+    },
+    {
+      "name": "Jennifer Rahme",
+      "email": "jennifer.rahme@email.com",
+      "phone": "+96170667890",
+      "address": {
+        "street": "987 Boulevard",
+        "city": "beirut",
+        "country": "lebanon",
+        "zipCode": "67890"
+      }
+    },
+    {
+      "name": "David Lteif",
+      "email": "david.lteif@email.com",
+      "phone": "+96170778901",
+      "address": {
+        "street": "147 Maple Drive",
+        "city": "fatqa",
+        "country": "lebanon",
+        "zipCode": "78901"
+      }
+    },
+    {
+      "name": "Tonia Rahme",
+      "email": "tonia.rahme@email.com",
+      "phone": "+96170889012",
+      "address": {
+        "street": "258 Walnut Street",
+        "city": "Bsharri",
+        "country": "lebanon",
+        "zipCode": "89012"
+      }
+    },
+    {
+      "name": "James Rahme",
+      "email": "james.rahme@email.com",
+      "phone": "+96170990123",
+      "address": {
+        "street": "369 Spruce Avenue",
+        "city": "Cedars",
+        "country": "lebanon",
+        "zipCode": "90123"
+      }
+    },
+    {
+      "name": "Amanda Khoury",
+      "email": "amanda.khoury@email.com",
+      "phone": "+96170912345",
+      "address": {
+        "street": "741 Way",
+        "city": "ghedres",
+        "country": "lebanon",
+        "zipCode": "01234"
+      }
+    },
+    {
+      "name": "Christopher Dahdah",
+      "email": "christopher.dahdah@email.com",
+      "phone": "+96170123457",
+      "address": {
+        "street": "852 Aspen Court",
+        "city": "aley",
+        "country": "lebanon",
+        "zipCode": "12346"
+      }
+    },
+    {
+      "name": "Elsa Tawk",
+      "email": "elsa.tawk@email.com",
+      "phone": "+96170133456",
+      "address": {
+        "street": "963 street",
+        "city": "Bsharri",
+        "country": "lebanon",
+        "zipCode": "23457"
+      }
+    }
+  ]
