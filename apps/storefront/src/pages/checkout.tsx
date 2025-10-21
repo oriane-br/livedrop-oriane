@@ -5,10 +5,11 @@ import { Card } from '@/components/atoms/card'
 import { Button } from '@/components/atoms/button'
 import { Price } from '@/components/atoms/price'
 import { useCart } from '@/lib/store'
-import { placeOrder } from '@/lib/api'
+import { ordersAPI } from '@/lib/api' // CHANGED: Use ordersAPI
 
 /**
  * Checkout page component with order summary and order placement
+ * UPDATED FOR WEEK 5: Now creates real orders in database
  */
 export default function Checkout() {
   const navigate = useNavigate()
@@ -30,17 +31,43 @@ export default function Checkout() {
   const tax = subtotal * 0.1 // 10% tax
   const total = subtotal + tax
 
-  // Place order handler
+  // CHANGED: Place order with real API
   const handlePlaceOrder = async () => {
     setLoading(true)
     setError(null)
     
     try {
-      const { orderId } = await placeOrder(cart.items)
+      // Get customer from localStorage (set during login)
+      const customerData = localStorage.getItem('shoplite_customer')
+      if (!customerData) {
+        setError('Please log in to place an order')
+        setLoading(false)
+        return
+      }
+
+      const customer = JSON.parse(customerData)
+
+      // Prepare order data
+      const orderData = {
+        customerId: customer._id,
+        items: cart.items.map(item => ({
+          productId: item.product.id,
+          name: item.product.title,
+          price: item.product.price,
+          quantity: item.quantity
+        })),
+        total: total
+      }
+
+      // CHANGED: Call real API to create order
+      const order = await ordersAPI.create(orderData)
+      
+      // Clear cart and navigate to order tracking
       cart.clearCart()
-      navigate(`/order/${orderId}`)
-    } catch (err) {
-      setError('Failed to place order. Please try again.')
+      navigate(`/order/${order._id}`)
+    } catch (err: any) {
+      console.error('Order creation failed:', err)
+      setError(err.message || 'Failed to place order. Please try again.')
       setLoading(false)
     }
   }
@@ -94,7 +121,7 @@ export default function Checkout() {
         {/* Note about payment */}
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
           <p className="text-sm text-blue-800">
-            <strong>Note:</strong> This is a demo checkout. No payment will be processed.
+            <strong>Note:</strong> This is a demo checkout. Your order will be created in the database and you can track it in real-time!
           </p>
         </div>
         

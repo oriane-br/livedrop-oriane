@@ -5,8 +5,8 @@ import Order from './models/order.js';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
-
+import dotenv from 'dotenv';
+import mongoose from 'mongoose';
 
 // Load environment variables
 dotenv.config();

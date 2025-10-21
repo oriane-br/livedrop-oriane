@@ -8,12 +8,24 @@ import { Badge } from '@/components/atoms/badge'
 import { Button } from '@/components/atoms/button'
 import { RelatedProducts } from '@/components/organisms/related-products'
 import { useCart } from '@/lib/store'
-import { getProduct, listProducts, getRelatedProducts } from '@/lib/api'
-import type { Product } from '@/lib/api'
+import { productsAPI } from '@/lib/api' // CHANGED: Use productsAPI
 import { getStockStatus } from '@/lib/format'
+
+// CHANGED: Backend product type
+interface Product {
+  _id: string
+  name: string
+  description: string
+  price: number
+  category: string
+  tags: string[]
+  imageUrl: string
+  stock: number
+}
 
 /**
  * Product details page component with related products and add-to-cart functionality
+ * UPDATED FOR WEEK 5: Now fetches from real backend API
  */
 export default function Product() {
   const { id } = useParams<{ id: string }>()
@@ -27,7 +39,7 @@ export default function Product() {
   const [loading, setLoading] = useState(true)
   const [notFound, setNotFound] = useState(false)
 
-  // Data fetching
+  // CHANGED: Data fetching with real API
   useEffect(() => {
     const loadProductData = async () => {
       if (!id) {
@@ -40,11 +52,8 @@ export default function Product() {
         setLoading(true)
         setNotFound(false)
 
-        // Load product and all products in parallel
-        const [productData, allProducts] = await Promise.all([
-          getProduct(id),
-          listProducts()
-        ])
+        // CHANGED: Fetch from real API
+        const productData = await productsAPI.getById(id)
 
         if (!productData) {
           setNotFound(true)
@@ -53,8 +62,16 @@ export default function Product() {
 
         setProduct(productData)
         
-        // Calculate related products
-        const related = getRelatedProducts(productData, allProducts)
+        // CHANGED: Fetch related products by same category or tags
+        const allProducts = await productsAPI.getAll({ limit: 50 })
+        const related = allProducts.products
+          .filter(p => 
+            p._id !== productData._id && 
+            (p.category === productData.category || 
+             p.tags.some(tag => productData.tags.includes(tag)))
+          )
+          .slice(0, 3)
+        
         setRelatedProducts(related)
       } catch (error) {
         console.error('Error loading product:', error)
@@ -70,7 +87,16 @@ export default function Product() {
   // Event handlers
   const handleAddToCart = () => {
     if (product) {
-      cart.addItem(product, quantity)
+      // Adapt product shape for cart
+      const cartProduct = {
+        id: product._id,
+        title: product.name,
+        price: product.price,
+        image: product.imageUrl,
+        tags: product.tags,
+        stockQty: product.stock
+      }
+      cart.addItem(cartProduct, quantity)
     }
   }
 
@@ -103,7 +129,7 @@ export default function Product() {
   }
 
   // Get stock status
-  const stockStatus = getStockStatus(product.stockQty)
+  const stockStatus = getStockStatus(product.stock) // CHANGED: Use stock instead of stockQty
 
   return (
     <PageLayout maxWidth="lg">
@@ -114,7 +140,7 @@ export default function Product() {
             Products
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-gray-600">{product.title}</span>
+          <span className="text-gray-600">{product.name}</span>
         </nav>
         
         {/* Product Details */}
@@ -122,8 +148,8 @@ export default function Product() {
           {/* Left: Image */}
           <div>
             <Image
-              src={product.image}
-              alt={product.title}
+              src={product.imageUrl} // CHANGED
+              alt={product.name}
               aspectRatio="1/1"
               className="rounded-lg"
             />
@@ -132,7 +158,7 @@ export default function Product() {
           {/* Right: Details */}
           <div className="space-y-6">
             <div>
-              <h1 className="text-3xl font-bold mb-2">{product.title}</h1>
+              <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
               <div className="flex items-center gap-3 mb-4">
                 <Price amount={product.price} size="xl" />
                 <Badge
@@ -142,6 +168,11 @@ export default function Product() {
                   {stockStatus.label}
                 </Badge>
               </div>
+            </div>
+            
+            {/* Category Badge */}
+            <div>
+              <Badge variant="default">{product.category}</Badge>
             </div>
             
             {/* Tags */}
@@ -155,7 +186,7 @@ export default function Product() {
             <div>
               <h2 className="font-semibold mb-2">Description</h2>
               <p className="text-gray-600">
-                High-quality {product.title.toLowerCase()} available now.
+                {product.description || `High-quality ${product.name.toLowerCase()} available now.`}
               </p>
             </div>
             
@@ -177,8 +208,8 @@ export default function Product() {
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={() => setQuantity(q => Math.min(product.stockQty, q + 1))}
-                  disabled={quantity === product.stockQty}
+                  onClick={() => setQuantity(q => Math.min(product.stock, q + 1))}
+                  disabled={quantity === product.stock}
                 >
                   +
                 </Button>
@@ -190,9 +221,9 @@ export default function Product() {
               size="lg"
               className="w-full"
               onClick={handleAddToCart}
-              disabled={product.stockQty === 0}
+              disabled={product.stock === 0}
             >
-              {product.stockQty === 0 ? 'Out of Stock' : 'Add to Cart'}
+              {product.stock === 0 ? 'Out of Stock' : 'Add to Cart'}
             </Button>
           </div>
         </div>
@@ -200,9 +231,26 @@ export default function Product() {
         {/* Related Products */}
         {relatedProducts.length > 0 && (
           <RelatedProducts
-            products={relatedProducts}
+            products={relatedProducts.map(p => ({
+              id: p._id,
+              title: p.name,
+              price: p.price,
+              image: p.imageUrl,
+              tags: p.tags,
+              stockQty: p.stock
+            }))}
             title="You might also like"
-            onAddToCart={(p) => cart.addItem(p, 1)}
+            onAddToCart={(p) => {
+              const cartProduct = {
+                id: p.id,
+                title: p.title,
+                price: p.price,
+                image: p.image,
+                tags: p.tags,
+                stockQty: p.stockQty
+              }
+              cart.addItem(cartProduct, 1)
+            }}
             onProductClick={(p) => navigate(`/p/${p.id}`)}
           />
         )}

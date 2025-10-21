@@ -3,24 +3,29 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { connectDB } from './db.js';
 
+// Import SSE handler
+import { handleOrderStatusStream } from './sse/order-status.js';
+
 // Import routes
 import customersRouter from './routes/customers.js';
 import productsRouter from './routes/products.js';
 import ordersRouter from './routes/orders.js';
 import analyticsRouter from './routes/analytics.js';
 import dashboardRouter, { trackMetrics } from './routes/dashboard.js';
+import assistantRouter from './routes/assistant.js';
 
 dotenv.config();
 
-const app = express();
+const app = express(); 
 const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: '*',
   credentials: true
 }));
 app.use(express.json());
+app.use(express.static('public'))
 
 // Request logging
 app.use((req, res, next) => {
@@ -40,12 +45,16 @@ app.get('/health', (req, res) => {
   });
 });
 
-// API Routes
+// API Routes - ✅ REGISTER ROUTES AFTER APP IS CREATED
 app.use('/api/customers', customersRouter);
 app.use('/api/products', productsRouter);
 app.use('/api/orders', ordersRouter);
 app.use('/api/analytics', analyticsRouter);
 app.use('/api/dashboard', dashboardRouter);
+app.use('/api/assistant', assistantRouter);
+
+// SSE endpoint for real-time order tracking
+app.get('/api/orders/:id/stream', handleOrderStatusStream);
 
 // 404 handler
 app.use((req, res) => {
@@ -79,6 +88,8 @@ async function startServer() {
       console.log(`   GET  /api/orders`);
       console.log(`   GET  /api/analytics/daily-revenue`);
       console.log(`   GET  /api/dashboard/business-metrics`);
+      console.log(`   POST /api/assistant/query`);
+      console.log(`   GET  /api/orders/:id/stream (SSE)`);
       console.log(`\n✨ Ready for requests!\n`);
     });
   } catch (error) {

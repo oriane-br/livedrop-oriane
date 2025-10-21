@@ -1,0 +1,219 @@
+[
+  {
+    "id": "Seller1.1",
+    "question": "How do I create a seller account on Shoplite?",
+    "answer": "To create a seller account, visit the Shoplite seller registration page and provide business information including your tax identification number and business registration documents. The verification process typically takes 2-3 business days to complete. All sellers must submit government-issued identification matching business registration details.",
+    "category": "seller_accounts",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Seller1.2",
+    "question": "What are seller performance requirements?",
+    "answer": "Sellers must maintain a 95% order fulfillment rate, keep cancellation rates below 2%, and maintain a minimum 4.0 customer satisfaction rating. These performance metrics determine seller tier status and search visibility on the platform.",
+    "category": "seller_accounts",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Returns2.1",
+    "question": "What is Shoplite's standard return policy?",
+    "answer": "Shoplite offers a 30-day return window for most items starting from the delivery date. Items must be in original condition with all tags, packaging, and documentation intact. Products showing signs of use or missing components may receive partial refunds or be ineligible for return.",
+    "category": "returns",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Returns2.2",
+    "question": "How do I initiate a return?",
+    "answer": "To initiate a return, log into your account and go to the order history section. Select the items you want to return, specify the reason from standardized categories, and request return authorization. Once approved, the system generates a prepaid shipping label that you can print or display as a QR code on mobile.",
+    "category": "returns",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Returns2.3",
+    "question": "Can I return sale items?",
+    "answer": "Regular sale items follow our standard 30-day return policy. However, items marked as 'Final Sale' cannot be returned. Check your receipt or the product page for final sale designation before purchasing.",
+    "category": "returns",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Returns2.4",
+    "question": "How long does refund processing take?",
+    "answer": "Standard refunds process within 5-7 business days after returned items pass inspection. Refunds go back to your original payment method for credit cards and digital wallets. Purchases made with promotional credits or gift cards receive equivalent store credit refunds.",
+    "category": "returns",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Payment3.1",
+    "question": "What payment methods does Shoplite accept?",
+    "answer": "Shoplite accepts major credit cards (Visa, MasterCard, American Express, Discover), debit cards, PayPal, Apple Pay, Google Pay, Samsung Pay, and Shoplite Wallet credits. Regional payment methods include direct bank transfers in supported countries and installment payment plans through partner financial institutions.",
+    "category": "payment",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Payment3.2",
+    "question": "Is my payment information secure?",
+    "answer": "Yes, all transactions benefit from PCI DSS Level 1 compliance. We use tokenization to replace sensitive payment data with unique identification symbols, and TLS 1.3 encryption protects data in transit. Your actual card numbers never reside on Shoplite systems. We also employ 3D Secure authentication for additional verification.",
+    "category": "payment",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Shipping4.1",
+    "question": "What are the shipping options and delivery times?",
+    "answer": "Standard delivery takes 3-7 business days and costs $5.99. Express delivery guarantees 1-2 business day delivery for $12.99. Same-day delivery is available in eligible metropolitan areas for orders placed before cutoff times. We offer free standard shipping on all orders over $50.",
+    "category": "shipping",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Shipping4.2",
+    "question": "How can I track my order?",
+    "answer": "Once your order ships, you'll receive a tracking number via email within 24 hours. You can track your order in real-time by logging into your account and visiting the order history page. The tracking dashboard shows visual timelines with key milestones and location data.",
+    "category": "shipping",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Shipping4.3",
+    "question": "Do you ship internationally?",
+    "answer": "Yes, we ship to the United States, Canada, and select European countries. International shipping takes 7-14 business days including customs processing. Shipping rates vary by destination and are calculated at checkout. We provide customs documentation assistance and duty/tax estimates during checkout.",
+    "category": "shipping",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Commission5.1",
+    "question": "What are the commission rates by category?",
+    "answer": "Commission rates vary by product category: Electronics 8%, Fashion 12%, Home Goods 10%, and Luxury Items 15%. These percentages cover payment processing, platform maintenance, and customer service infrastructure.",
+    "category": "fees",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Commission5.2",
+    "question": "How do seller tiers affect commission rates?",
+    "answer": "Seller tiers provide commission reductions based on performance. Starter tier (0-50 monthly orders) pays standard rates. Professional tier (51-500 orders) receives 1% reduction, while Enterprise tier (500+ orders) gets 2% reduction. Monthly tier reviews automatically adjust rates for qualifying sellers.",
+    "category": "fees",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Commission5.3",
+    "question": "What additional fees should sellers know about?",
+    "answer": "Additional fees include payment processing at 2.9% + $0.30 per transaction for credit cards. Optional subscription tiers cost $29.99 monthly for Professional and $79.99 for Enterprise. Promoted Listings use cost-per-click bidding with customizable daily budgets.",
+    "category": "fees",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "MobileApp6.1",
+    "question": "What exclusive features does the mobile app offer?",
+    "answer": "The Shoplite mobile app offers biometric login (Touch ID, Face ID), visual search through camera, barcode scanning for price comparison, voice search, augmented reality product visualization, push notifications for order updates, and offline browsing capabilities. These features are not available on the web interface.",
+    "category": "mobile",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Loyalty7.1",
+    "question": "How does the Shoplite Rewards loyalty program work?",
+    "answer": "The Shoplite Rewards program has three tiers: Silver (0-999 points), Gold (1,000-4,999 points), and Platinum (5,000+ points). Members earn 1 point per dollar spent on purchases, plus bonus points for reviews (50 points), social shares (25 points), and referrals (500 points). Points can be redeemed for shopping credits at 100 points = $1.",
+    "category": "loyalty",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Loyalty7.2",
+    "question": "What benefits do Platinum members receive?",
+    "answer": "Platinum members (5,000+ points) receive dedicated customer service with under 1-minute response times, early sale access 24 hours before public promotions, birthday rewards, partner perks including hotel status matching and airline lounge access, and higher earning multipliers on purchases.",
+    "category": "loyalty",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Promos8.1",
+    "question": "How do promotional codes work?",
+    "answer": "Promotional codes offer percentage discounts, fixed amount reductions, free shipping, or bundle deals. Codes can be applied during checkout with real-time savings calculation. Public codes distribute broadly, while private codes target specific customer segments. Single-use codes provide exclusive offers for high-value customers.",
+    "category": "promotions",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Promos8.2",
+    "question": "Can I stack multiple promotional codes?",
+    "answer": "The standard hierarchy applies sitewide promotions first, followed by category discounts, then product-specific offers. The system automatically selects the most beneficial combination for customers. However, certain promotion types cannot be stacked, particularly those already offering deep discounts.",
+    "category": "promotions",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Support9.1",
+    "question": "What customer support options are available?",
+    "answer": "Shoplite offers 24/7 support via live chat, email ticketing, and telephone. Live chat connects you with agents in under 2 minutes. Email support guarantees responses within 4 hours for standard issues and 1 hour for urgent matters. Phone support is available for complex scenarios requiring detailed discussion.",
+    "category": "support",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Support9.2",
+    "question": "How are support tickets prioritized?",
+    "answer": "Support uses three priority tiers: Critical (system outages, payment failures receive immediate attention), High (order problems, account access issues within 1 hour), and Standard (general inquiries within 4 hours). Automated categorization routes tickets to specialized teams based on issue type.",
+    "category": "support",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Reviews10.1",
+    "question": "How does the product review system work?",
+    "answer": "Shoplite uses a 1-5 star rating system with written reviews. Only verified purchasers can submit reviews, typically 7-14 days after delivery. Reviews can include photos and videos. Community voting identifies the most helpful reviews, which rise to top positions. Seller responses are allowed for engagement and issue resolution.",
+    "category": "reviews",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Reviews10.2",
+    "question": "What content is prohibited in reviews?",
+    "answer": "Prohibited review content includes hate speech, discriminatory remarks, personal information disclosure, promotional material, irrelevant political commentary, personal attacks, and compensated testimonials. Automated filters flag inappropriate content before publication, with human moderators reviewing borderline cases.",
+    "category": "reviews",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "API11.1",
+    "question": "What API capabilities does Shoplite offer developers?",
+    "answer": "The Shoplite RESTful API provides programmatic access to product catalogs, order management, customer data, and analytics through OAuth 2.0 authentication. Basic accounts receive 1,000 requests per hour, Professional tier gets 10,000, and Enterprise offers customizable limits. Webhook infrastructure enables real-time event notifications.",
+    "category": "api",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "API11.2",
+    "question": "How does API security work?",
+    "answer": "API security uses OAuth 2.0 protocol with both client credentials and authorization code flows. All endpoints utilize HTTPS encryption with JSON formatting. Rate limit headers communicate usage against quotas. Webhook payloads include signing for message authenticity verification. Sandbox environments enable safe testing without affecting production.",
+    "category": "api",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Security12.1",
+    "question": "How does Shoplite protect my personal data?",
+    "answer": "Shoplite implements defense-in-depth security with TLS 1.3 for network transmission and AES-256 encryption for stored data. We use role-based access controls, multi-factor authentication for admin accounts, and adaptive risk assessment for login attempts. Regular security audits and penetration testing ensure ongoing protection.",
+    "category": "security",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Security12.2",
+    "question": "What privacy controls do users have?",
+    "answer": "Users can download complete personal information archives, selectively delete specific data categories, and manage marketing preferences through the account settings dashboard. We provide clear privacy notices explaining data collection purposes and usage. Account deletion requests initiate a 14-day cooling-off period before permanent data erasure.",
+    "category": "security",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Quality13.1",
+    "question": "What are marketplace quality standards for sellers?",
+    "answer": "Sellers must maintain 95% order fulfillment rates within promised timeframes and keep cancellation rates below 2%. Product listings require accurate titles without keyword stuffing, minimum resolution images from multiple angles, comprehensive descriptions, and correct category assignments. Prohibited items include counterfeits, regulated substances, and restricted weapons.",
+    "category": "quality",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Quality13.2",
+    "question": "How are quality standards enforced?",
+    "answer": "Quality assurance uses automated monitoring with image recognition and natural language processing, plus manual auditing through random sampling. Customer reports enable community participation. Enforcement follows progressive actions: first violations get warnings, repeated violations trigger temporary restrictions, and severe violations result in account suspension with appeal procedures.",
+    "category": "quality",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Inventory14.1",
+    "question": "How does seller inventory management work?",
+    "answer": "Sellers access real-time inventory dashboards with color-coded stock level indicators and automated low stock alerts at customizable thresholds. The system supports single SKU tracking, matrix inventory for product variations, bundle products, and multi-location management. Inventory synchronizes across all sales channels through robust API connections.",
+    "category": "inventory",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Account15.1",
+    "question": "How do I create a buyer account?",
+    "answer": "To create a buyer account, visit the Shoplite homepage and click Register. Provide a valid email address, create a secure password (minimum 8 characters with uppercase, lowercase, number, and special character), and enter basic personal information. You must verify your email within 24 hours using the six-digit code or verification link sent to your inbox.",
+    "category": "accounts",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  }
+]

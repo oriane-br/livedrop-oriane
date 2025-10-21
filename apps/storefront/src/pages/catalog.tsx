@@ -7,10 +7,23 @@ import { SortDropdown, SortOption } from '@/components/molecules/sort-dropdown'
 import { TagFilter } from '@/components/molecules/tag-filter'
 import { ProductGrid } from '@/components/organisms/product-grid'
 import { useCart } from '@/lib/store'
-import { listProducts, Product } from '@/lib/api'
+import { productsAPI } from '@/lib/api' // CHANGED: Use productsAPI instead of listProducts
+
+// CHANGED: Update Product type to match backend
+interface Product {
+  _id: string
+  name: string
+  description: string
+  price: number
+  category: string
+  tags: string[]
+  imageUrl: string
+  stock: number
+}
 
 /**
  * Catalog page component with search, sort, filter, and add-to-cart functionality
+ * UPDATED FOR WEEK 5: Now connects to real backend API with database
  */
 export default function Catalog() {
   // State management
@@ -20,6 +33,11 @@ export default function Catalog() {
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+
+  // Pagination state (NEW for Week 5)
+  const [currentPage, setCurrentPage] = useState(1)
+  const [totalProducts, setTotalProducts] = useState(0)
+  const itemsPerPage = 20
 
   // Hooks
   const navigate = useNavigate()
@@ -34,50 +52,60 @@ export default function Catalog() {
     return Array.from(tagSet).sort()
   }, [products])
 
-  // Filter pipeline
-  const filteredProducts = useMemo(() => {
-    let result = products
+  // CHANGED: Server-side filtering (backend handles this now)
+  // We only do client-side sort for better UX
+  const sortedProducts = useMemo(() => {
+    const result = [...products]
     
-    // Apply search
-    if (searchQuery) {
-      const tokens = searchQuery.toLowerCase().split(' ').filter(Boolean)
-      result = result.filter(product => 
-        tokens.some(token =>
-          product.title.toLowerCase().includes(token) ||
-          product.tags.some(tag => tag.toLowerCase().includes(token))
-        )
-      )
-    }
-    
-    // Apply tag filter
-    if (selectedTags.length > 0) {
-      result = result.filter(product =>
-        selectedTags.every(tag => product.tags.includes(tag))
-      )
-    }
-    
-    // Apply sort
-    result = [...result].sort((a, b) => {
+    result.sort((a, b) => {
       switch (sortOption) {
         case 'price-asc': return a.price - b.price
         case 'price-desc': return b.price - a.price
-        case 'name-asc': return a.title.localeCompare(b.title)
-        case 'name-desc': return b.title.localeCompare(a.title)
+        case 'name-asc': return a.name.localeCompare(b.name)
+        case 'name-desc': return b.name.localeCompare(a.name)
         default: return 0
       }
     })
     
     return result
-  }, [products, searchQuery, selectedTags, sortOption])
+  }, [products, sortOption])
 
-  // Data fetching
+  // CHANGED: Data fetching with real API
   useEffect(() => {
     const loadProducts = async () => {
       try {
         setLoading(true)
         setError(null)
-        const fetchedProducts = await listProducts()
-        setProducts(fetchedProducts)
+        
+        // Build query params for backend
+        const params: any = {
+          page: currentPage,
+          limit: itemsPerPage
+        }
+        
+        if (searchQuery) {
+          params.search = searchQuery
+        }
+        
+        if (selectedTags.length > 0) {
+          // Backend expects tag filter (adjust based on your API)
+          params.tag = selectedTags[0] // Simple implementation
+        }
+
+        // Map sort option to backend format
+        const sortMap: Record<SortOption, string> = {
+          'price-asc': 'price_asc',
+          'price-desc': 'price_desc',
+          'name-asc': 'name',
+          'name-desc': 'name'
+        }
+        params.sort = sortMap[sortOption]
+
+        // CHANGED: Call real API
+        const response = await productsAPI.getAll(params)
+        
+        setProducts(response.products)
+        setTotalProducts(response.total)
       } catch (err) {
         setError('Failed to load products')
         console.error('Error loading products:', err)
@@ -87,7 +115,7 @@ export default function Catalog() {
     }
 
     loadProducts()
-  }, [])
+  }, [currentPage, searchQuery, selectedTags, sortOption])
 
   // Event handlers
   const handleToggleTag = (tag: string) => {
@@ -96,25 +124,34 @@ export default function Catalog() {
         ? prev.filter(t => t !== tag)
         : [...prev, tag]
     )
+    setCurrentPage(1) // Reset to first page when filtering
   }
 
   const handleAddToCart = (product: Product) => {
-    cart.addItem(product, 1)
+    // CHANGED: Adapt product shape for cart
+    const cartProduct = {
+      id: product._id,
+      title: product.name,
+      price: product.price,
+      image: product.imageUrl,
+      tags: product.tags,
+      stockQty: product.stock
+    }
+    cart.addItem(cartProduct, 1)
   }
 
   const handleProductClick = (product: Product) => {
-    navigate(`/p/${product.id}`)
+    navigate(`/p/${product._id}`) // CHANGED: Use _id
   }
 
   const retry = () => {
     setError(null)
     setLoading(true)
-    // Trigger useEffect to reload
     setProducts([])
   }
 
   // Loading state
-  if (loading) {
+  if (loading && products.length === 0) {
     return (
       <PageLayout maxWidth="lg">
         <Loading text="Loading products..." />
@@ -144,14 +181,17 @@ export default function Catalog() {
       <div className="py-8 space-y-6">
         <div>
           <h1 className="text-3xl font-bold mb-2">Products</h1>
-          <p className="text-gray-600">Browse our collection of {products.length} products</p>
+          <p className="text-gray-600">Browse our collection of {totalProducts} products</p>
         </div>
         
         <div className="flex flex-col md:flex-row gap-4">
           <div className="flex-1">
             <SearchBar 
               value={searchQuery}
-              onChange={setSearchQuery}
+              onChange={(value) => {
+                setSearchQuery(value)
+                setCurrentPage(1) // Reset page on search
+              }}
               placeholder="Search products..."
             />
           </div>
@@ -169,10 +209,17 @@ export default function Catalog() {
         
         <div>
           <p className="text-sm text-gray-600 mb-4">
-            Showing {filteredProducts.length} of {products.length} products
+            Showing {sortedProducts.length} products
           </p>
           <ProductGrid
-            products={filteredProducts}
+            products={sortedProducts.map(p => ({
+              id: p._id,
+              title: p.name,
+              price: p.price,
+              image: p.imageUrl,
+              tags: p.tags,
+              stockQty: p.stock
+            }))}
             onAddToCart={handleAddToCart}
             onProductClick={handleProductClick}
             emptyStateMessage={

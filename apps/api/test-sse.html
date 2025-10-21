@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SSE Test - Order Tracking</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
+    .status { padding: 10px; margin: 10px 0; border-radius: 5px; }
+    .PENDING { background: #fff3cd; }
+    .PROCESSING { background: #cfe2ff; }
+    .SHIPPED { background: #d1e7dd; }
+    .DELIVERED { background: #d1e7dd; font-weight: bold; }
+    input, button { padding: 10px; margin: 5px; font-size: 16px; }
+    #log { background: #f8f9fa; padding: 15px; border-radius: 5px; max-height: 400px; overflow-y: auto; }
+  </style>
+</head>
+<body>
+  <h1>📦 Real-Time Order Tracking Test</h1>
+  
+  <div>
+    <input type="text" id="orderId" placeholder="Enter Order ID" style="width: 300px;">
+    <button onclick="connectSSE()">Track Order</button>
+    <button onclick="disconnect()">Disconnect</button>
+  </div>
+
+  <h2>Current Status:</h2>
+  <div id="currentStatus" class="status">Not connected</div>
+
+  <h2>Event Log:</h2>
+  <div id="log"></div>
+
+  <script>
+    let eventSource = null;
+
+    function connectSSE() {
+      const orderId = document.getElementById('orderId').value.trim();
+      if (!orderId) {
+        alert('Please enter an Order ID');
+        return;
+      }
+
+      // Close existing connection
+      if (eventSource) {
+        eventSource.close();
+      }
+
+      // Clear log
+      document.getElementById('log').innerHTML = '';
+      log(`🔌 Connecting to order ${orderId}...`);
+
+      // Create EventSource
+      eventSource = new EventSource(`http://localhost:3001/api/orders/${orderId}/stream`);
+
+      eventSource.onopen = () => {
+        log('✅ Connected to server');
+      };
+
+      eventSource.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        log(`📦 Status Update: ${JSON.stringify(data, null, 2)}`);
+        
+        // Update current status display
+        const statusDiv = document.getElementById('currentStatus');
+        statusDiv.className = `status ${data.status}`;
+        statusDiv.innerHTML = `
+          <strong>Status:</strong> ${data.status}<br>
+          ${data.carrier ? `<strong>Carrier:</strong> ${data.carrier}<br>` : ''}
+          ${data.trackingNumber ? `<strong>Tracking:</strong> ${data.trackingNumber}<br>` : ''}
+          ${data.estimatedDelivery ? `<strong>ETA:</strong> ${new Date(data.estimatedDelivery).toLocaleDateString()}<br>` : ''}
+          <strong>Updated:</strong> ${new Date(data.updatedAt).toLocaleTimeString()}
+        `;
+      };
+
+      eventSource.addEventListener('complete', (event) => {
+        log('✅ Order delivered - stream complete');
+        eventSource.close();
+      });
+
+      eventSource.onerror = (error) => {
+        log('❌ Connection error');
+        console.error('SSE Error:', error);
+        eventSource.close();
+      };
+    }
+
+    function disconnect() {
+      if (eventSource) {
+        eventSource.close();
+        log('🔌 Disconnected');
+      }
+    }
+
+    function log(message) {
+      const logDiv = document.getElementById('log');
+      const timestamp = new Date().toLocaleTimeString();
+      logDiv.innerHTML += `<div>[${timestamp}] ${message}</div>`;
+      logDiv.scrollTop = logDiv.scrollHeight;
+    }
+  </script>
+</body>
+</html>

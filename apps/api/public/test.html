@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Test Assistant</h1>
+  <button onclick="test()">Test Query</button>
+  <pre id="result"></pre>
+
+  <script>
+    async function test() {
+      const response = await fetch('http://localhost:3001/api/assistant/query', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: 'What is your return policy?' })
+      });
+      const data = await response.json();
+      document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>
