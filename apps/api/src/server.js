@@ -1,7 +1,13 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { connectDB } from './db.js';
+
+// Get current directory for ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Import SSE handler
 import { handleOrderStatusStream } from './sse/order-status.js';
@@ -14,7 +20,9 @@ import analyticsRouter from './routes/analytics.js';
 import dashboardRouter, { trackMetrics } from './routes/dashboard.js';
 import assistantRouter from './routes/assistant.js';
 
-dotenv.config();
+dotenv.config({ path: path.join(__dirname, '../.env') });
+
+// Environment variables loaded successfully
 
 const app = express(); 
 const PORT = process.env.PORT || 3001;
