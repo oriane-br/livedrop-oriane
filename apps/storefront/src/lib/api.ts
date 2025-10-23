@@ -1,10 +1,3 @@
-// apps/storefront/src/lib/api.ts
-
-/**
- * API Client for Shoplite Backend
- * Connects to real backend API (replacing mock data)
- */
-
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
 // Types
@@ -194,6 +187,14 @@ export const ordersAPI = {
     return `${API_BASE_URL}/orders/${orderId}/stream`;
   }
 };
+
+export async function getOrderStatus(orderId: string) {
+  const response = await fetch(`${API_BASE_URL}/orders/${orderId}`);
+  if (!response.ok) {
+    throw new APIError(response.status, `Order ${orderId} not found`);
+  }
+  return handleResponse<Order>(response);
+}
 
 // ============================================================================
 // ANALYTICS API

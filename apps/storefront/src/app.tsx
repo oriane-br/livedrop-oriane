@@ -15,12 +15,9 @@ export default function App() {
   const [customer, setCustomer] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Check for existing session
+  // On app load, always clear localStorage and force fresh login
   useEffect(() => {
-    const stored = localStorage.getItem('shoplite_customer');
-    if (stored) {
-      setCustomer(JSON.parse(stored));
-    }
+    localStorage.removeItem('shoplite_customer');
     setLoading(false);
   }, []);
 
