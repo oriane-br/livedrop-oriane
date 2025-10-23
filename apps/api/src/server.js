@@ -25,7 +25,7 @@ dotenv.config({ path: path.join(__dirname, '../.env') });
 // Environment variables loaded successfully
 
 const app = express(); 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 10000;
 
 // Middleware
 app.use(cors({
@@ -43,6 +43,27 @@ app.use((req, res, next) => {
 
 // Metrics tracking
 app.use(trackMetrics);
+
+console.log('✅ Middleware setup complete');
+console.log('✅ Environment:', process.env.NODE_ENV);
+console.log('✅ MongoDB URI:', process.env.MONGODB_URI ? 'Set' : 'Not set');
+console.log('✅ Port:', PORT);
+
+// Add this route to handle the root URL
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Welcome to Shoplite API',
+    version: '1.0.0',
+    endpoints: {
+      products: '/api/products',
+      orders: '/api/orders', 
+      customers: '/api/customers',
+      analytics: '/api/analytics',
+      assistant: '/api/assistant/query'
+    },
+    documentation: 'Check README for API documentation'
+  });
+});
 
 // Health check
 app.get('/health', (req, res) => {
@@ -105,5 +126,7 @@ async function startServer() {
     process.exit(1);
   }
 }
+
+console.log('✅ All routes registered');
 
 startServer();

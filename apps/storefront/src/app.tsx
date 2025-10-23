@@ -1,6 +1,15 @@
 import { useState, useEffect } from 'react';
 import UserLogin from './components/UserLogin';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SupportAssistant from './components/SupportAssistant';
+import Catalog from './pages/catalog';
+import Cart from './pages/cart';
+import Checkout from './pages/checkout';
+import OrderStatusPage from './pages/order-status';
+import AdminDashboard from './pages/AdminDashboard';
+import NotFound from './pages/not-found';
+import { CartProvider } from './lib/store';
+import Product from './pages/product';
 
 export default function App() {
   const [customer, setCustomer] = useState(null);
@@ -15,7 +24,7 @@ export default function App() {
     setLoading(false);
   }, []);
 
-  const handleLogin = (customerData) => {
+  const handleLogin = (customerData: any) => {
     setCustomer(customerData);
   };
 
@@ -36,20 +45,30 @@ export default function App() {
   // Show main app
   return (
     <BrowserRouter>
-      <div>
-        {/* Your existing navigation with logout button */}
-        <nav>
-          <span>Welcome, {customer.name}</span>
-          <button onClick={handleLogout}>Logout</button>
-        </nav>
+      <CartProvider>
+        <div>
+          {/* Your existing navigation with logout button */}
+          <nav>
+            <span>
+              Welcome, {customer && (customer as any)?.name ? (customer as any).name : 'Customer'}
+            </span>
+            <button onClick={handleLogout}>Logout</button>
+          </nav>
 
-        <Routes>
-          {/* Your existing routes */}
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Catalog />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/order/:orderId" element={<OrderStatusPage />} />
+            <Route path="/p/:id" element={<Product />} />
+            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
 
-        {/* Add Support Assistant */}
-        <SupportAssistant customerId={customer._id} />
-      </div>
+          {/* Add Support Assistant */}
+          <SupportAssistant customerId={(customer as any)?._id} />
+        </div>
+      </CartProvider>
     </BrowserRouter>
   );
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { dashboardAPI, analyticsAPI, assistantAPI } from '../lib/api';
+import { dashboardAPI, assistantAPI } from '../lib/api';
 
 export default function AdminDashboard() {
   const [businessMetrics, setBusinessMetrics] = useState<any>(null);
